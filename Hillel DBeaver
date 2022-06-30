@@ -1,0 +1,16 @@
+SELECT * FROM  Track t WHERE Composer = 'AC/DC';
+SELECT * FROM Album a WHERE AlbumId = 4;
+
+SELECT * FROM Track t join Album a on t.AlbumId = a.AlbumId WHERE t.Composer = 'AC/DC';
+
+SELECT t.Name , a.Title  FROM Track t  join  Album a  on t.AlbumId = a.AlbumId WHERE t.Composer = 'AC/DC';
+
+SELECT COUNT(InvoiceLineId) from InvoiceLine il ;
+
+SELECT C.FirstName , C.LastName, c.Email, MAXv(i.Total)  
+FROM Customer c join Invoice i on c.CustomerId = i.CustomerId;
+
+SELECT C.FirstName , C.LastName, c.Email 
+FROM Customer c 
+join Invoice i 
+on c.CustomerId = i.CustomerId
